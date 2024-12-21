@@ -6,12 +6,12 @@ FROM debian:12-slim
 SHELL ["/bin/bash", "-c"]
 
 ## Set environment variables
-ENV USER root
-ENV HOME /root
-ENV DEBIAN_FRONTEND noninteractive
-ENV LANG fr_FR.UTF-8
-ENV LANGUAGE C
-ENV LC_ALL C
+ENV USER=root
+ENV HOME=/root
+ENV DEBIAN_FRONTEND=noninteractive
+ENV LANG=fr_FR.UTF-8
+ENV LANGUAGE=C
+ENV LC_ALL=C
 
 ## Installation des utilitaires de base
 RUN apt-get update && apt-get -y install software-properties-common supervisor
@@ -36,7 +36,7 @@ RUN apt-get update && apt-get -y upgrade
 ## Go and mhsendmail
 RUN apt-get update && apt-get install -y golang-go
 RUN mkdir /opt/go
-ENV GOPATH /opt/go
+ENV GOPATH=/opt/go
 
 ## mhsendmail
 RUN go install github.com/mailhog/mhsendmail@latest

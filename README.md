@@ -3,9 +3,9 @@
 Debian 12 base image
 
 ```
-docker build -t="sapaig/debian-12" .
+docker build -t="freeasso/debian-12" .
 ```
 
 ```
-docker run -it --name="debian-12" sapaig/debian-12 /bin/bash
+docker run -it --name="debian-12" freeasso/debian-12 /bin/bash
 ```
